@@ -14,6 +14,9 @@
 		3E8BD51C1BF70C0C0018EEE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8BD51B1BF70C0C0018EEE4 /* Assets.xcassets */; };
 		3E8BD51F1BF70C0C0018EEE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8BD51D1BF70C0C0018EEE4 /* LaunchScreen.storyboard */; };
 		3E8BD52A1BF70C0D0018EEE4 /* foodhavenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8BD5291BF70C0D0018EEE4 /* foodhavenTests.swift */; };
+		3EB06B601BF7E38300D54747 /* HomeRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB06B5F1BF7E38300D54747 /* HomeRestaurant.swift */; };
+		3EB06B621BF7E3CE00D54747 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB06B611BF7E3CE00D54747 /* Menu.swift */; };
+		3EB06B641BF7E3FC00D54747 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB06B631BF7E3FC00D54747 /* FoodItem.swift */; };
 		8CF837441487EFE6844DC670 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587208DFF93C7C844A873F7F /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,9 @@
 		3E8BD5251BF70C0D0018EEE4 /* foodhavenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = foodhavenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8BD5291BF70C0D0018EEE4 /* foodhavenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodhavenTests.swift; sourceTree = "<group>"; };
 		3E8BD52B1BF70C0D0018EEE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EB06B5F1BF7E38300D54747 /* HomeRestaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRestaurant.swift; sourceTree = "<group>"; };
+		3EB06B611BF7E3CE00D54747 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		3EB06B631BF7E3FC00D54747 /* FoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
 		587208DFF93C7C844A873F7F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83143EA0438F119E32098632 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ACC95E4203BD158F51854834 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +92,7 @@
 		3E8BD5131BF70C0C0018EEE4 /* foodhaven */ = {
 			isa = PBXGroup;
 			children = (
+				3EB06B5E1BF7E38300D54747 /* Model */,
 				3E8BD5141BF70C0C0018EEE4 /* AppDelegate.swift */,
 				3E8BD5161BF70C0C0018EEE4 /* ViewController.swift */,
 				3E8BD5181BF70C0C0018EEE4 /* Main.storyboard */,
@@ -104,6 +111,16 @@
 				3E8BD52B1BF70C0D0018EEE4 /* Info.plist */,
 			);
 			path = foodhavenTests;
+			sourceTree = "<group>";
+		};
+		3EB06B5E1BF7E38300D54747 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3EB06B5F1BF7E38300D54747 /* HomeRestaurant.swift */,
+				3EB06B611BF7E3CE00D54747 /* Menu.swift */,
+				3EB06B631BF7E3FC00D54747 /* FoodItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3F97307E180F91F133448C88 /* Pods */ = {
@@ -276,8 +293,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E8BD5171BF70C0C0018EEE4 /* ViewController.swift in Sources */,
+				3EB06B601BF7E38300D54747 /* HomeRestaurant.swift in Sources */,
 				3E0B811F1BF70F7F0030CFDA /* FoodShareMapViewViewController.swift in Sources */,
 				3E8BD5151BF70C0C0018EEE4 /* AppDelegate.swift in Sources */,
+				3EB06B641BF7E3FC00D54747 /* FoodItem.swift in Sources */,
+				3EB06B621BF7E3CE00D54747 /* Menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
