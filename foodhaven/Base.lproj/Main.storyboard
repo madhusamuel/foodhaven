@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="1110" y="-315"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="YOX-n8-cRe">
             <objects>
-                <viewController id="mkB-6Y-zlM" sceneMemberID="viewController">
+                <viewController id="mkB-6Y-zlM" customClass="MenuViewController" customModule="foodhaven" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9AP-aV-AXM"/>
                         <viewControllerLayoutGuide type="bottom" id="vOQ-Px-mPe"/>
@@ -97,7 +97,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="MBw-Se-ioL" detailTextLabel="M4Z-59-Apd" style="IBUITableViewCellStyleValue1" id="nnt-YV-kqE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuItem" textLabel="MBw-Se-ioL" detailTextLabel="M4Z-59-Apd" style="IBUITableViewCellStyleValue1" id="nnt-YV-kqE">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nnt-YV-kqE" id="XhU-zY-EMZ">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -128,6 +128,10 @@
                                         <animations/>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="mkB-6Y-zlM" id="p8q-kb-ZWb"/>
+                                    <outlet property="delegate" destination="mkB-6Y-zlM" id="ljA-6n-6oF"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <animations/>
@@ -172,6 +176,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="izI-dJ-r27" id="6Xj-40-vYn"/>
+                        <outlet property="tableView" destination="YKb-UJ-GD7" id="AvP-f7-xeh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tdX-aD-9Ia" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

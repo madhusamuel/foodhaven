@@ -56,27 +56,37 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate {
     }
     
     // MARK: - GMSMapViewDelegate
-    
+    var selectedHomeRestaurant: HomeRestaurant?
     func mapView(mapView: GMSMapView!, didTapInfoWindowOfMarker marker: GMSMarker!) {
         print("tapped me at \(marker.position)")
-        if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
-            UIApplication.sharedApplication().openURL(NSURL(string:
-                "comgooglemapsurl://?&daddr=\(marker.position.latitude),\(marker.position.longitude)&directionsmode=walking")!)
-        } else {
-            print("Can't use comgooglemaps://");
-            let alertController = UIAlertController(title: nil, message: "Unable to open google maps! You need to run this app in an iOS 9 device.", preferredStyle: .Alert)
-            let okAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-                alertController.dismissViewControllerAnimated(false, completion: nil)
+        selectedHomeRestaurant = findHomeRestaurant(marker.title)
+        performSegueWithIdentifier("showMenuSegue", sender: self)
+    }
+    
+    func findHomeRestaurant(restaurantName: String) -> HomeRestaurant? {
+        for restaurant in homeRestaurants {
+            if restaurant.name == restaurantName {
+                return restaurant
             }
-            alertController.addAction(okAction)
-            presentViewController(alertController, animated: true, completion: nil)
-            
         }
+        return nil
     }
     
     func dummyData() -> [HomeRestaurant] {
-        let rest1 = HomeRestaurant(name: "Barbara's Kitchen", location: CLLocationCoordinate2D(latitude: -37.598473, longitude: 144.221200), specialFoodItem: FoodItem(name: "Pizza", price: 10))
+        let rest1 = HomeRestaurant(name: "Barbara's Kitchen", location: CLLocationCoordinate2D(latitude: -37.598473, longitude: 144.221200), specialFoodItem: FoodItem(name: "Pizza", price: 10, ingredients: "Flour", photo: "pizza.jpg"))
         return [rest1]
     }
+    
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showMenuSegue" {
+            let menuViewController = segue.destinationViewController as! MenuViewController
+            menuViewController.homeRestaurant = selectedHomeRestaurant
+        }
+    }
+
 
 }
