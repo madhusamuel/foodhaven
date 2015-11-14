@@ -13,11 +13,14 @@ class HomeRestaurant {
     
     var name: String
     var location: CLLocationCoordinate2D
+    var specialFoodItem: FoodItem
     var menu: Menu!
+    var photoName: String!
     
-    init(name: String, location: CLLocationCoordinate2D) {
+    init(name: String, location: CLLocationCoordinate2D, specialFoodItem: FoodItem) {
         self.name = name
         self.location = location
+        self.specialFoodItem = specialFoodItem
     }
     
 }
