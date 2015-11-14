@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3E0B811F1BF70F7F0030CFDA /* FoodShareMapViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B811E1BF70F7F0030CFDA /* FoodShareMapViewViewController.swift */; };
 		3E8BD5151BF70C0C0018EEE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8BD5141BF70C0C0018EEE4 /* AppDelegate.swift */; };
-		3E8BD5171BF70C0C0018EEE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8BD5161BF70C0C0018EEE4 /* ViewController.swift */; };
 		3E8BD51A1BF70C0C0018EEE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8BD5181BF70C0C0018EEE4 /* Main.storyboard */; };
 		3E8BD51C1BF70C0C0018EEE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8BD51B1BF70C0C0018EEE4 /* Assets.xcassets */; };
 		3E8BD51F1BF70C0C0018EEE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8BD51D1BF70C0C0018EEE4 /* LaunchScreen.storyboard */; };
@@ -34,7 +33,6 @@
 		3E0B811E1BF70F7F0030CFDA /* FoodShareMapViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodShareMapViewViewController.swift; sourceTree = "<group>"; };
 		3E8BD5111BF70C0C0018EEE4 /* foodhaven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodhaven.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8BD5141BF70C0C0018EEE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3E8BD5161BF70C0C0018EEE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3E8BD5191BF70C0C0018EEE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E8BD51B1BF70C0C0018EEE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E8BD51E1BF70C0C0018EEE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 			children = (
 				3EB06B5E1BF7E38300D54747 /* Model */,
 				3E8BD5141BF70C0C0018EEE4 /* AppDelegate.swift */,
-				3E8BD5161BF70C0C0018EEE4 /* ViewController.swift */,
 				3E8BD5181BF70C0C0018EEE4 /* Main.storyboard */,
 				3E8BD51B1BF70C0C0018EEE4 /* Assets.xcassets */,
 				3E8BD51D1BF70C0C0018EEE4 /* LaunchScreen.storyboard */,
@@ -292,7 +289,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E8BD5171BF70C0C0018EEE4 /* ViewController.swift in Sources */,
 				3EB06B601BF7E38300D54747 /* HomeRestaurant.swift in Sources */,
 				3E0B811F1BF70F7F0030CFDA /* FoodShareMapViewViewController.swift in Sources */,
 				3E8BD5151BF70C0C0018EEE4 /* AppDelegate.swift in Sources */,
