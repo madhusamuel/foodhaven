@@ -14,8 +14,12 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate {
     @IBOutlet weak var mapView: GMSMapView!
     
     //TODO change to current location co-ordinates
-    let latitudeOfMelbourne = -37.8136
-    let longitudeOfMelbourne = 144.9631
+//    let latitudeOfMelbourne = -37.591291
+//    let longitudeOfMelbourne = 144.202203
+    let latitudeOfMelbourne = -37.599705
+    let longitudeOfMelbourne = 144.227555
+    
+    //,
     
     var foodShareLocations: [HomeRestaurant] = []
     
@@ -30,7 +34,7 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate {
     
     private func setupMap() {
         let camera = GMSCameraPosition.cameraWithLatitude(latitudeOfMelbourne,
-            longitude: longitudeOfMelbourne, zoom: 12)
+            longitude: longitudeOfMelbourne, zoom: 15)
         mapView.camera = camera
         mapView.myLocationEnabled = true
         self.view = mapView

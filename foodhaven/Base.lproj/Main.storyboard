@@ -16,10 +16,48 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXN-YG-ave" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CXN-YG-ave" secondAttribute="bottom" id="JZO-O9-FZE"/>
+                            <constraint firstAttribute="trailing" secondItem="CXN-YG-ave" secondAttribute="trailing" id="Kcu-Nd-IeN"/>
+                            <constraint firstItem="CXN-YG-ave" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Lw9-1l-MtC"/>
+                            <constraint firstItem="CXN-YG-ave" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xNW-ng-jS5"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="CXN-YG-ave"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Kcu-Nd-IeN"/>
+                                <exclude reference="Lw9-1l-MtC"/>
+                                <exclude reference="xNW-ng-jS5"/>
+                                <exclude reference="JZO-O9-FZE"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="CXN-YG-ave"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Kcu-Nd-IeN"/>
+                                <include reference="Lw9-1l-MtC"/>
+                                <include reference="xNW-ng-jS5"/>
+                                <include reference="JZO-O9-FZE"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="dFb-6U-WjE"/>
+                    <connections>
+                        <outlet property="mapView" destination="CXN-YG-ave" id="7LK-hz-n25"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
