@@ -72,12 +72,6 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate {
         return nil
     }
     
-    func dummyData() -> [HomeRestaurant] {
-        let rest1 = HomeRestaurant(name: "Barbara's Kitchen", location: CLLocationCoordinate2D(latitude: -37.598473, longitude: 144.221200), specialFoodItem: FoodItem(name: "Pizza", price: 10, ingredients: "Flour", photo: "pizza.jpg"))
-        return [rest1]
-    }
-    
-    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -86,6 +80,20 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate {
             let menuViewController = segue.destinationViewController as! MenuViewController
             menuViewController.homeRestaurant = selectedHomeRestaurant
         }
+    }
+    
+    // MARK: Dummy Data
+    
+    func dummyData() -> [HomeRestaurant] {
+        let foodItem1 = FoodItem(name: "Pizza", price: 10, ingredients: "Flour", photo: "pizza.jpg")
+        let foodItem2 = FoodItem(name: "Chicken Burger", price: 8, ingredients: "Chicken, Bread", photo: "burger.jpg")
+        let foodItems = [foodItem1, foodItem2]
+        let rest1 = HomeRestaurant(name: "Barbara's Kitchen", location: CLLocationCoordinate2D(latitude: -37.598473, longitude: 144.221200), specialFoodItem: foodItems[0])
+        
+        rest1.menu = Menu()
+        rest1.menu.photo = "Kitchen1.jpg"
+        rest1.menu.foodItems = foodItems
+        return [rest1]
     }
 
 

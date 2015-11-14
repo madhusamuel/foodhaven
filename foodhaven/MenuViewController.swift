@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var homeRestaurant: HomeRestaurant!
     @IBOutlet weak var photoImageView: UIImageView!
@@ -18,6 +18,26 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return homeRestaurant.menu.foodItems.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("menuItem")
+        let foodItem = homeRestaurant.menu.foodItems[indexPath.row]
+        cell?.textLabel?.text = foodItem.name
+        cell?.detailTextLabel?.text = String(foodItem.price)
+        return cell!
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("showFoodItemSegue", sender: self)
     }
     
 
