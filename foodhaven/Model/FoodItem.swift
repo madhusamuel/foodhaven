@@ -14,6 +14,7 @@ class FoodItem {
     var price: Float
     var stock: Int!
     var ingredients: [String] = []
+    var photo: String
     
     init(name: String, price: Float) {
         self.name = name
