@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="1879.5" y="-315"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Food Table View Controller-->
         <scene sceneID="Bmg-1f-Afl">
             <objects>
-                <tableViewController id="bkg-jP-wV2" sceneMemberID="viewController">
+                <tableViewController id="bkg-jP-wV2" customClass="FoodTableViewController" customModule="foodhaven" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LtI-AY-ABl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -379,14 +379,17 @@
                                                     <color key="backgroundColor" red="0.4941176471" green="0.80392156859999997" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <state key="normal" title="ORDER"/>
+                                                    <connections>
+                                                        <action selector="orderButtonTapped:" destination="bkg-jP-wV2" eventType="touchUpInside" id="DsT-pR-gDO"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstItem="z7R-fA-HrW" firstAttribute="top" secondItem="2qp-ex-QBQ" secondAttribute="top" id="Ivs-QD-rJP"/>
                                                 <constraint firstAttribute="bottom" secondItem="z7R-fA-HrW" secondAttribute="bottom" id="K1p-L4-KBz"/>
-                                                <constraint firstItem="z7R-fA-HrW" firstAttribute="leading" secondItem="2qp-ex-QBQ" secondAttribute="leading" id="ah9-tq-Unr"/>
-                                                <constraint firstAttribute="trailing" secondItem="z7R-fA-HrW" secondAttribute="trailing" id="jvP-UV-sCg"/>
+                                                <constraint firstItem="z7R-fA-HrW" firstAttribute="leading" secondItem="2qp-ex-QBQ" secondAttribute="leading" constant="8" id="ah9-tq-Unr"/>
+                                                <constraint firstAttribute="trailing" secondItem="z7R-fA-HrW" secondAttribute="trailing" constant="8" id="jvP-UV-sCg"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
@@ -421,6 +424,14 @@
                             <outlet property="delegate" destination="bkg-jP-wV2" id="vtP-ek-Yrg"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="foodImageView" destination="XXR-WD-zB8" id="IMg-MJ-lXO"/>
+                        <outlet property="foodIngredientsLabel" destination="FFj-FY-wBR" id="Czg-O9-42y"/>
+                        <outlet property="foodTitleLabel" destination="3qC-1q-JVC" id="VYE-pL-zcU"/>
+                        <outlet property="ingredientsLabel" destination="FFj-FY-wBR" id="9CL-n7-5Ox"/>
+                        <outlet property="priceLabel" destination="9YF-qB-Yv8" id="Zqg-Zs-scW"/>
+                        <outlet property="stockLabel" destination="6aV-KJ-jDH" id="mS1-CI-nfc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vM-sJ-GCV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

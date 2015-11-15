@@ -27,7 +27,7 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.homeRestaurants = dummyData()
+        self.homeRestaurants = createNewDummyData() //dummyData()
         setupMap()
         addMarkers()
     }
@@ -44,15 +44,18 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate {
     }
     
     func addMarkers() {
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2DMake(homeRestaurants[0].location.latitude, homeRestaurants[0].location.longitude)
-        marker.title = homeRestaurants[0].name
-        marker.snippet = homeRestaurants[0].specialFoodItem.name
-        marker.appearAnimation = kGMSMarkerAnimationPop
-        marker.map = mapView
-        currentMarker = marker
-        let cameraPosition = GMSCameraPosition(target: marker.position, zoom: 15, bearing: mapView.camera.bearing, viewingAngle: mapView.camera.viewingAngle)
-        mapView.animateToCameraPosition(cameraPosition)
+        for homeRestaurant in homeRestaurants {
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2DMake(homeRestaurant.location.latitude, homeRestaurant.location.longitude)
+            marker.title = homeRestaurant.name
+            marker.snippet = homeRestaurant.specialFoodItem.name
+            marker.appearAnimation = kGMSMarkerAnimationPop
+            marker.map = mapView
+            currentMarker = marker
+            let cameraPosition = GMSCameraPosition(target: marker.position, zoom: 15, bearing: mapView.camera.bearing, viewingAngle: mapView.camera.viewingAngle)
+            mapView.animateToCameraPosition(cameraPosition)
+        }
+        
     }
     
     // MARK: - GMSMapViewDelegate
@@ -85,8 +88,8 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate {
     // MARK: Dummy Data
     
     func dummyData() -> [HomeRestaurant] {
-        let foodItem1 = FoodItem(name: "Pizza", price: 10, ingredients: "Flour", photo: "pizza.jpg")
-        let foodItem2 = FoodItem(name: "Chicken Burger", price: 8, ingredients: "Chicken, Bread", photo: "burger.jpg")
+        let foodItem1 = FoodItem(name: "Pizza", price: 10, stock: 5, ingredients: "Flour", photo: "pizza.jpg")
+        let foodItem2 = FoodItem(name: "Chicken Burger", price: 8, stock: 3, ingredients: "Chicken, Bread", photo: "burger.jpg")
         let foodItems = [foodItem1, foodItem2]
         let rest1 = HomeRestaurant(name: "Barbara's Kitchen", location: CLLocationCoordinate2D(latitude: -37.598473, longitude: 144.221200), specialFoodItem: foodItems[0])
         
@@ -94,6 +97,29 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate {
         rest1.menu.photo = "Kitchen1.jpg"
         rest1.menu.foodItems = foodItems
         return [rest1]
+    }
+    
+    func createNewDummyData() -> [HomeRestaurant] {
+        return [
+            createRestaurant("Barbara's Kitchen", location: CLLocationCoordinate2D(latitude: -37.598473, longitude: 144.221200),
+                foodItems:
+                    [FoodItem(name: "Pizza", price: 10, stock: 5, ingredients: "Flour", photo: "pizza.jpg"),
+                    FoodItem(name: "Pizza", price: 10, stock: 5, ingredients: "Flour", photo: "pizza.jpg")],
+                photo: "kitchen1.jpg"),
+            createRestaurant("Barbara's Kitchen", location: CLLocationCoordinate2D(latitude: -37.601637, longitude: 144.223335),
+                foodItems:
+                [FoodItem(name: "Pizza", price: 10, stock: 5, ingredients: "Flour", photo: "pizza.jpg"),
+                    FoodItem(name: "Pizza", price: 10, stock: 5, ingredients: "Flour", photo: "pizza.jpg")],
+                photo: "kitchen1.jpg")
+        ]
+    }
+    
+    func createRestaurant(name: String, location: CLLocationCoordinate2D, foodItems: [FoodItem], photo: String) -> HomeRestaurant {
+        let homeRestaurant = HomeRestaurant(name: name, location: location, specialFoodItem: foodItems[0])
+        homeRestaurant.menu = Menu()
+        homeRestaurant.menu.photo = photo
+        homeRestaurant.menu.foodItems = foodItems
+        return homeRestaurant
     }
 
 

@@ -12,13 +12,14 @@ class FoodItem {
     
     var name: String
     var price: Float
-    var stock: Int!
+    var stock: Int
     var ingredients: String
     var photo: String
     
-    init(name: String, price: Float, ingredients: String, photo: String) {
+    init(name: String, price: Float, stock: Int, ingredients: String, photo: String) {
         self.name = name
         self.price = price
+        self.stock = stock
         self.ingredients = ingredients
         self.photo = photo
     }
