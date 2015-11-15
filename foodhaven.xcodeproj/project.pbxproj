@@ -547,6 +547,7 @@
 					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
 					"BluedotPointSDK/include/**",
 				);
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = foodhaven/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -606,6 +607,7 @@
 					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
 					"BluedotPointSDK/include/**",
 				);
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = foodhaven/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

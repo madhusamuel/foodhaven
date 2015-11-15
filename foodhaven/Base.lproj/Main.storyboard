@@ -260,11 +260,11 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qC-1q-JVC">
                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFj-FY-wBR">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFj-FY-wBR">
                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -277,6 +277,8 @@
                                                 <constraint firstItem="3qC-1q-JVC" firstAttribute="top" secondItem="hR8-JD-Qop" secondAttribute="topMargin" id="Kde-Do-08p"/>
                                                 <constraint firstItem="3qC-1q-JVC" firstAttribute="centerX" secondItem="hR8-JD-Qop" secondAttribute="centerX" id="Ov3-gk-a3q"/>
                                                 <constraint firstItem="FFj-FY-wBR" firstAttribute="top" secondItem="3qC-1q-JVC" secondAttribute="bottom" id="Ys7-JE-Nj5"/>
+                                                <constraint firstItem="FFj-FY-wBR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hR8-JD-Qop" secondAttribute="leading" constant="8" id="ae4-3t-7Nj"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FFj-FY-wBR" secondAttribute="trailing" constant="8" id="bkg-6W-Ulw"/>
                                                 <constraint firstItem="FFj-FY-wBR" firstAttribute="centerX" secondItem="hR8-JD-Qop" secondAttribute="centerX" id="vch-qg-k41"/>
                                             </constraints>
                                             <variation key="default">
@@ -285,10 +287,12 @@
                                                     <exclude reference="FFj-FY-wBR"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <exclude reference="Ys7-JE-Nj5"/>
+                                                    <exclude reference="ae4-3t-7Nj"/>
+                                                    <exclude reference="bkg-6W-Ulw"/>
+                                                    <exclude reference="vch-qg-k41"/>
                                                     <exclude reference="Kde-Do-08p"/>
                                                     <exclude reference="Ov3-gk-a3q"/>
-                                                    <exclude reference="Ys7-JE-Nj5"/>
-                                                    <exclude reference="vch-qg-k41"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -297,10 +301,12 @@
                                                     <include reference="FFj-FY-wBR"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <include reference="Ys7-JE-Nj5"/>
+                                                    <include reference="ae4-3t-7Nj"/>
+                                                    <include reference="bkg-6W-Ulw"/>
+                                                    <include reference="vch-qg-k41"/>
                                                     <include reference="Kde-Do-08p"/>
                                                     <include reference="Ov3-gk-a3q"/>
-                                                    <include reference="Ys7-JE-Nj5"/>
-                                                    <include reference="vch-qg-k41"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -331,6 +337,7 @@
                                             <animations/>
                                             <constraints>
                                                 <constraint firstItem="6aV-KJ-jDH" firstAttribute="centerY" secondItem="xJu-2L-ype" secondAttribute="centerY" id="3nh-aM-j4o"/>
+                                                <constraint firstItem="9YF-qB-Yv8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6aV-KJ-jDH" secondAttribute="trailing" constant="16" id="JiM-ob-WoJ"/>
                                                 <constraint firstItem="9YF-qB-Yv8" firstAttribute="centerY" secondItem="xJu-2L-ype" secondAttribute="centerY" id="Ndp-5W-3NF"/>
                                                 <constraint firstItem="6aV-KJ-jDH" firstAttribute="leading" secondItem="xJu-2L-ype" secondAttribute="leading" constant="8" id="Nxb-T5-Xca"/>
                                                 <constraint firstAttribute="trailing" secondItem="9YF-qB-Yv8" secondAttribute="trailing" constant="8" id="Odt-9r-npI"/>
@@ -343,6 +350,7 @@
                                                 <mask key="constraints">
                                                     <exclude reference="3nh-aM-j4o"/>
                                                     <exclude reference="Nxb-T5-Xca"/>
+                                                    <exclude reference="JiM-ob-WoJ"/>
                                                     <exclude reference="Ndp-5W-3NF"/>
                                                     <exclude reference="Odt-9r-npI"/>
                                                 </mask>
@@ -355,6 +363,7 @@
                                                 <mask key="constraints">
                                                     <include reference="3nh-aM-j4o"/>
                                                     <include reference="Nxb-T5-Xca"/>
+                                                    <include reference="JiM-ob-WoJ"/>
                                                     <include reference="Ndp-5W-3NF"/>
                                                     <include reference="Odt-9r-npI"/>
                                                 </mask>
@@ -367,10 +376,10 @@
                             <tableViewSection id="p14-Xj-WmL">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="64" id="IXj-Xd-zRl">
-                                        <rect key="frame" x="0.0" y="64" width="600" height="235"/>
+                                        <rect key="frame" x="0.0" y="412" width="600" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IXj-Xd-zRl" id="2qp-ex-QBQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="234.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="63.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7R-fA-HrW">

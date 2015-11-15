@@ -9,6 +9,5 @@
 import Foundation
 
 class Menu {
-    var photo: String!
     var foodItems: [FoodItem] = []
 }
