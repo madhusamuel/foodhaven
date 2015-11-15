@@ -24,7 +24,7 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
         locationManager.locationDelegate = self
         locationManager.sessionDelegate  = self
         
-        locationManager.authenticateWithApiKey("1e789f50-8b34-11e5-84c8-bc305bf60831", packageName: "au.com.foodhaven", username: "foodhavenapp@gmail.com")
+        locationManager.authenticateWithApiKey("1762e480-8b36-11e5-84c8-bc305bf60831", packageName: "au.com.foodhaven", username: "foodhavenapp@gmail.com")
         
         return true
     }
@@ -57,23 +57,23 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate : BDPSessionDelegate {
     
     public func willAuthenticateWithUsername( username: String!, apiKey: String!, packageName: String!) {
-
+        print("willAuthenticateWithUsername")
     }
 
     public func authenticationWasSuccessful() {
-        
+        print("authenticationWasSuccessful")
     }
 
     public func authenticationWasDeniedWithReason( reason: String!) {
-        
+        print("authenticationWasDeniedWithReason")
     }
 
     public func authenticationFailedWithError( error: NSError!) {
-        
+        print("authenticationFailedWithError")
     }
 
     public func didEndSession() {
-        
+        print("didEndSession")
     }
 }
 
@@ -81,10 +81,25 @@ extension AppDelegate : BDPLocationDelegate {
     
     public func didUpdateZoneInfo(zoneInfos: Set<NSObject>!) {
         
+        var zoneInfos2 = [BDZoneInfo]()
+        zoneInfos.forEach()
+        {
+            (zoneInfoObj: NSObject ) in
+            zoneInfos2.append( zoneInfoObj as! BDZoneInfo )
+        }
+        
         // This gives you access to all the Zones defined in the back-end, in case you want to show them on the map
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
+        let mapViewController = storyboard.instantiateViewControllerWithIdentifier("FoodShareMapViewController") as! FoodShareMapViewViewController
         
+        var combinedData = RestaurantFactory.createNewDummyData()
+        combinedData += RestaurantFactory.createBluedotDummyData(zoneInfos2)
+        
+        mapViewController.homeRestaurants = combinedData
+        
+        (window!.rootViewController! as! UINavigationController).pushViewController(mapViewController, animated: true)
     }
 
     public func didCheckIntoFence( fence: BDFenceInfo?, inZone zoneInfo: BDZoneInfo?, atCoordinate coordinate: BDLocationCoordinate2D, onDate date: NSDate!) {
