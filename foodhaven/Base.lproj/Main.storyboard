@@ -69,7 +69,7 @@
         <!--Menu View Controller-->
         <scene sceneID="YOX-n8-cRe">
             <objects>
-                <viewController id="mkB-6Y-zlM" customClass="MenuViewController" customModule="foodhaven" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" id="mkB-6Y-zlM" customClass="MenuViewController" customModule="foodhaven" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9AP-aV-AXM"/>
                         <viewControllerLayoutGuide type="bottom" id="vOQ-Px-mPe"/>

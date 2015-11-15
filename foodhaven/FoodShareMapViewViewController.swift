@@ -38,6 +38,7 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate {
         let camera = GMSCameraPosition.cameraWithLatitude(latitudeOfMelbourne,
             longitude: longitudeOfMelbourne, zoom: 14.5)
         mapView.camera = camera
+        mapView.mapType = kGMSTypeSatellite
         mapView.myLocationEnabled = true
         self.view = mapView
         mapView.delegate = self

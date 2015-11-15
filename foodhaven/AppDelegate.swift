@@ -51,7 +51,7 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    var mapViewController : FoodShareMapViewViewController?
 }
 
 extension AppDelegate : BDPSessionDelegate {
@@ -79,6 +79,7 @@ extension AppDelegate : BDPSessionDelegate {
 
 extension AppDelegate : BDPLocationDelegate {
     
+    
     public func didUpdateZoneInfo(zoneInfos: Set<NSObject>!) {
         
         var zoneInfos2 = [BDZoneInfo]()
@@ -92,20 +93,39 @@ extension AppDelegate : BDPLocationDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let mapViewController = storyboard.instantiateViewControllerWithIdentifier("FoodShareMapViewController") as! FoodShareMapViewViewController
+        self.mapViewController = storyboard.instantiateViewControllerWithIdentifier("FoodShareMapViewController") as? FoodShareMapViewViewController
         
-        var combinedData = RestaurantFactory.createNewDummyData()
-        combinedData += RestaurantFactory.createBluedotDummyData(zoneInfos2)
+        var combinedData = RestaurantFactory.createBluedotDummyData(zoneInfos2)
+        combinedData += RestaurantFactory.createNewDummyData()
         
-        mapViewController.homeRestaurants = combinedData
+        self.mapViewController!.homeRestaurants = combinedData
         
-        (window!.rootViewController! as! UINavigationController).pushViewController(mapViewController, animated: true)
+        (window!.rootViewController! as! UINavigationController).pushViewController( self.mapViewController!, animated: true)
     }
 
     public func didCheckIntoFence( fence: BDFenceInfo?, inZone zoneInfo: BDZoneInfo?, atCoordinate coordinate: BDLocationCoordinate2D, onDate date: NSDate!) {
         
-        // TODO: Implement here: To show
+        let zoneName : String = zoneInfo!.name
+        let restaurantName : String
         
+        if zoneName == "Menu A"
+        {
+            restaurantName = "Mia's Kitchen"
+        }
+        else
+        {
+            restaurantName = "Toms"
+        }
+        
+        let restaurant : HomeRestaurant = mapViewController!.findHomeRestaurant(restaurantName)!
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let menuViewController = storyboard.instantiateViewControllerWithIdentifier("MenuViewController") as? MenuViewController
+        
+        menuViewController?.homeRestaurant = restaurant
+        
+        (window!.rootViewController! as! UINavigationController).pushViewController( self.mapViewController!, animated: true)
     }
 
     public func didCheckIntoBeacon( beacon: BDBeaconInfo?, inZone zoneInfo: BDZoneInfo?, withProximity proximity: CLProximity, onDate date: NSDate!) {
