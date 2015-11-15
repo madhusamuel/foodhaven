@@ -16,10 +16,10 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate {
     //TODO change to current location co-ordinates
 //    let latitudeOfMelbourne = -37.591291
 //    let longitudeOfMelbourne = 144.202203
-    let latitudeOfMelbourne = -37.599705
-    let longitudeOfMelbourne = 144.227555
+    let latitudeOfMelbourne = -37.602282
+    let longitudeOfMelbourne = 144.231143
     
-    //,
+    //,latitude: -37.602282, longitude: 144.231143
     
     var homeRestaurants: [HomeRestaurant] = []
     
@@ -36,7 +36,7 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate {
     
     private func setupMap() {
         let camera = GMSCameraPosition.cameraWithLatitude(latitudeOfMelbourne,
-            longitude: longitudeOfMelbourne, zoom: 14)
+            longitude: longitudeOfMelbourne, zoom: 14.5)
         mapView.camera = camera
         mapView.myLocationEnabled = true
         self.view = mapView
@@ -52,8 +52,8 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate {
             marker.appearAnimation = kGMSMarkerAnimationPop
             marker.map = mapView
             currentMarker = marker
-            let cameraPosition = GMSCameraPosition(target: marker.position, zoom: 15, bearing: mapView.camera.bearing, viewingAngle: mapView.camera.viewingAngle)
-            mapView.animateToCameraPosition(cameraPosition)
+//            let cameraPosition = GMSCameraPosition(target: marker.position, zoom: 15, bearing: mapView.camera.bearing, viewingAngle: mapView.camera.viewingAngle)
+//            mapView.animateToCameraPosition(cameraPosition)
         }
         
     }
@@ -113,12 +113,12 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate {
                 photo: "US_family_in_kitchen"),
             createRestaurant("Spicy Kitchen", location: CLLocationCoordinate2D(latitude: -37.603344, longitude: 144.223346),
                 foodItems:
-                [FoodItem(name: "Indian bread(Roti)", price: 10, stock: 5, ingredients: "Wheat Flour, salt, olive oil", photo: "chapati"),
+                [FoodItem(name: "Indian Roti", price: 10, stock: 5, ingredients: "Wheat Flour, salt, olive oil", photo: "chapati"),
                     FoodItem(name: "Spicy Goat Curry", price: 2, stock: 30, ingredients: "Goat, ginger, garlic, onion, tomato, garam masala, chilli, curry leaves, coconut oil", photo: "goat_curry")],
                 photo: "family_in_kitchen"),
             createRestaurant("Eva's Kitchen", location: CLLocationCoordinate2D(latitude: -37.602282, longitude: 144.231143),
                 foodItems:
-                [FoodItem(name: "Butter Dosa with Potato Masala", price: 10, stock: 5, ingredients: "Rice, Urud Dhal, Potato, chilli, tomato, turmeric, ginger", photo: "masala_dosa")],
+                [FoodItem(name: "Masala Dosa", price: 10, stock: 5, ingredients: "Rice, Urud Dhal, Potato, chilli, tomato, turmeric, ginger", photo: "masala_dosa")],
                 photo: "granny_kid_in_kitchen"),
             createRestaurant("Mia's Kitchen", location: CLLocationCoordinate2D(latitude: -37.602169, longitude: 144.233822),
                 foodItems:

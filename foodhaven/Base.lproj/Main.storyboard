@@ -337,6 +337,7 @@
                                             <animations/>
                                             <constraints>
                                                 <constraint firstItem="6aV-KJ-jDH" firstAttribute="centerY" secondItem="xJu-2L-ype" secondAttribute="centerY" id="3nh-aM-j4o"/>
+                                                <constraint firstItem="9YF-qB-Yv8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6aV-KJ-jDH" secondAttribute="trailing" constant="16" id="JiM-ob-WoJ"/>
                                                 <constraint firstItem="9YF-qB-Yv8" firstAttribute="centerY" secondItem="xJu-2L-ype" secondAttribute="centerY" id="Ndp-5W-3NF"/>
                                                 <constraint firstItem="6aV-KJ-jDH" firstAttribute="leading" secondItem="xJu-2L-ype" secondAttribute="leading" constant="8" id="Nxb-T5-Xca"/>
                                                 <constraint firstAttribute="trailing" secondItem="9YF-qB-Yv8" secondAttribute="trailing" constant="8" id="Odt-9r-npI"/>
@@ -349,6 +350,7 @@
                                                 <mask key="constraints">
                                                     <exclude reference="3nh-aM-j4o"/>
                                                     <exclude reference="Nxb-T5-Xca"/>
+                                                    <exclude reference="JiM-ob-WoJ"/>
                                                     <exclude reference="Ndp-5W-3NF"/>
                                                     <exclude reference="Odt-9r-npI"/>
                                                 </mask>
@@ -361,6 +363,7 @@
                                                 <mask key="constraints">
                                                     <include reference="3nh-aM-j4o"/>
                                                     <include reference="Nxb-T5-Xca"/>
+                                                    <include reference="JiM-ob-WoJ"/>
                                                     <include reference="Ndp-5W-3NF"/>
                                                     <include reference="Odt-9r-npI"/>
                                                 </mask>
