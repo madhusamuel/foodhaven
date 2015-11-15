@@ -89,6 +89,8 @@ extension AppDelegate : BDPLocationDelegate {
             zoneInfos2.append( zoneInfoObj as! BDZoneInfo )
         }
         
+        
+        
         // This gives you access to all the Zones defined in the back-end, in case you want to show them on the map
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -125,7 +127,7 @@ extension AppDelegate : BDPLocationDelegate {
         
         menuViewController?.homeRestaurant = restaurant
         
-        (window!.rootViewController! as! UINavigationController).pushViewController( self.mapViewController!, animated: true)
+        (window!.rootViewController! as! UINavigationController).pushViewController( menuViewController!, animated: true)
     }
 
     public func didCheckIntoBeacon( beacon: BDBeaconInfo?, inZone zoneInfo: BDZoneInfo?, withProximity proximity: CLProximity, onDate date: NSDate!) {
