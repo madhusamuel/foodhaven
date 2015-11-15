@@ -18,6 +18,13 @@
 		3EB06B641BF7E3FC00D54747 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB06B631BF7E3FC00D54747 /* FoodItem.swift */; };
 		3EB06B661BF7F74A00D54747 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB06B651BF7F74A00D54747 /* MenuViewController.swift */; };
 		3EB06B681BF7FDA700D54747 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB06B671BF7FDA700D54747 /* FoodTableViewController.swift */; };
+		836268AA1BF81E9700759CE5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836268A91BF81E9700759CE5 /* CoreLocation.framework */; };
+		836268AC1BF81E9D00759CE5 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836268AB1BF81E9D00759CE5 /* CoreMotion.framework */; };
+		836268AE1BF81ECA00759CE5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836268AD1BF81ECA00759CE5 /* CoreGraphics.framework */; };
+		836268B01BF81ECF00759CE5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836268AF1BF81ECF00759CE5 /* SystemConfiguration.framework */; };
+		836268B21BF81EDA00759CE5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836268B11BF81EDA00759CE5 /* AudioToolbox.framework */; };
+		836268B41BF81EE700759CE5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836268B31BF81EE700759CE5 /* UIKit.framework */; };
+		836268B61BF81EED00759CE5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836268B51BF81EED00759CE5 /* AVFoundation.framework */; };
 		8CF837441487EFE6844DC670 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587208DFF93C7C844A873F7F /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +56,47 @@
 		3EB06B671BF7FDA700D54747 /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
 		587208DFF93C7C844A873F7F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83143EA0438F119E32098632 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		836268A91BF81E9700759CE5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		836268AB1BF81E9D00759CE5 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		836268AD1BF81ECA00759CE5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		836268AF1BF81ECF00759CE5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		836268B11BF81EDA00759CE5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		836268B31BF81EE700759CE5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		836268B51BF81EED00759CE5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		836268B71BF8228D00759CE5 /* foodhaven-bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "foodhaven-bridging-header.h"; sourceTree = "<group>"; };
+		836268BB1BF822E600759CE5 /* BDAuthenticationState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDAuthenticationState.h; sourceTree = "<group>"; };
+		836268BC1BF822E600759CE5 /* BDBeaconInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBeaconInfo.h; sourceTree = "<group>"; };
+		836268BD1BF822E600759CE5 /* BDBoundingBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBoundingBox.h; sourceTree = "<group>"; };
+		836268BE1BF822E600759CE5 /* BDCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDCircle.h; sourceTree = "<group>"; };
+		836268BF1BF822E600759CE5 /* BDFenceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDFenceInfo.h; sourceTree = "<group>"; };
+		836268C01BF822E600759CE5 /* BDGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDGeometry.h; sourceTree = "<group>"; };
+		836268C11BF822E600759CE5 /* BDGeospatialUnits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDGeospatialUnits.h; sourceTree = "<group>"; };
+		836268C21BF822E600759CE5 /* BDLineString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDLineString.h; sourceTree = "<group>"; };
+		836268C31BF822E600759CE5 /* BDLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDLocation.h; sourceTree = "<group>"; };
+		836268C41BF822E600759CE5 /* BDLocationManager+BDPointSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BDLocationManager+BDPointSDK.h"; sourceTree = "<group>"; };
+		836268C51BF822E600759CE5 /* BDLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDLocationManager.h; sourceTree = "<group>"; };
+		836268C61BF822E600759CE5 /* BDPAuthenticationStateProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPAuthenticationStateProvider.h; sourceTree = "<group>"; };
+		836268C71BF822E600759CE5 /* BDPDeepCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPDeepCopy.h; sourceTree = "<group>"; };
+		836268C81BF822E600759CE5 /* BDPGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPGeometry.h; sourceTree = "<group>"; };
+		836268C91BF822E600759CE5 /* BDPLocationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPLocationDelegate.h; sourceTree = "<group>"; };
+		836268CA1BF822E600759CE5 /* BDPManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPManagedObject.h; sourceTree = "<group>"; };
+		836268CB1BF822E600759CE5 /* BDPMKShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPMKShape.h; sourceTree = "<group>"; };
+		836268CC1BF822E600759CE5 /* BDPNamedDescribed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPNamedDescribed.h; sourceTree = "<group>"; };
+		836268CD1BF822E600759CE5 /* BDPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPoint.h; sourceTree = "<group>"; };
+		836268CE1BF822E600759CE5 /* BDPointDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPointDelegate.h; sourceTree = "<group>"; };
+		836268CF1BF822E600759CE5 /* BDPointOverlayRendererFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPointOverlayRendererFactory.h; sourceTree = "<group>"; };
+		836268D01BF822E600759CE5 /* BDPointSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPointSDK.h; sourceTree = "<group>"; };
+		836268D11BF822E600759CE5 /* BDPointSessionException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPointSessionException.h; sourceTree = "<group>"; };
+		836268D21BF822E600759CE5 /* BDPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPolygon.h; sourceTree = "<group>"; };
+		836268D31BF822E600759CE5 /* BDPolygonal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPolygonal.h; sourceTree = "<group>"; };
+		836268D41BF822E600759CE5 /* BDPRestartAlertDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPRestartAlertDelegate.h; sourceTree = "<group>"; };
+		836268D51BF822E600759CE5 /* BDPSessionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPSessionDelegate.h; sourceTree = "<group>"; };
+		836268D61BF822E600759CE5 /* BDPSpatialObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPSpatialObject.h; sourceTree = "<group>"; };
+		836268D71BF822E600759CE5 /* BDPSpatialObjectInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPSpatialObjectInfo.h; sourceTree = "<group>"; };
+		836268D81BF822E600759CE5 /* BDPValidatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPValidatable.h; sourceTree = "<group>"; };
+		836268D91BF822E600759CE5 /* BDZoneInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDZoneInfo.h; sourceTree = "<group>"; };
+		836268DA1BF822E600759CE5 /* MKMapView+BDPointSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+BDPointSDK.h"; sourceTree = "<group>"; };
+		836268DB1BF822E600759CE5 /* NSString+BDURLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BDURLEncoding.h"; sourceTree = "<group>"; };
 		ACC95E4203BD158F51854834 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +105,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				836268B61BF81EED00759CE5 /* AVFoundation.framework in Frameworks */,
+				836268B41BF81EE700759CE5 /* UIKit.framework in Frameworks */,
+				836268B21BF81EDA00759CE5 /* AudioToolbox.framework in Frameworks */,
+				836268B01BF81ECF00759CE5 /* SystemConfiguration.framework in Frameworks */,
+				836268AE1BF81ECA00759CE5 /* CoreGraphics.framework in Frameworks */,
+				836268AC1BF81E9D00759CE5 /* CoreMotion.framework in Frameworks */,
+				836268AA1BF81E9700759CE5 /* CoreLocation.framework in Frameworks */,
 				8CF837441487EFE6844DC670 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +129,7 @@
 		3E8BD5081BF70C0C0018EEE4 = {
 			isa = PBXGroup;
 			children = (
+				836268B91BF822E600759CE5 /* BluedotPointSDK */,
 				3E8BD5131BF70C0C0018EEE4 /* foodhaven */,
 				3E8BD5281BF70C0D0018EEE4 /* foodhavenTests */,
 				3E8BD5121BF70C0C0018EEE4 /* Products */,
@@ -103,6 +159,7 @@
 				3E0B811E1BF70F7F0030CFDA /* FoodShareMapViewViewController.swift */,
 				3EB06B651BF7F74A00D54747 /* MenuViewController.swift */,
 				3EB06B671BF7FDA700D54747 /* FoodTableViewController.swift */,
+				836268B71BF8228D00759CE5 /* foodhaven-bridging-header.h */,
 			);
 			path = foodhaven;
 			sourceTree = "<group>";
@@ -135,9 +192,64 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		836268B91BF822E600759CE5 /* BluedotPointSDK */ = {
+			isa = PBXGroup;
+			children = (
+				836268BA1BF822E600759CE5 /* include */,
+			);
+			path = BluedotPointSDK;
+			sourceTree = "<group>";
+		};
+		836268BA1BF822E600759CE5 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				836268BB1BF822E600759CE5 /* BDAuthenticationState.h */,
+				836268BC1BF822E600759CE5 /* BDBeaconInfo.h */,
+				836268BD1BF822E600759CE5 /* BDBoundingBox.h */,
+				836268BE1BF822E600759CE5 /* BDCircle.h */,
+				836268BF1BF822E600759CE5 /* BDFenceInfo.h */,
+				836268C01BF822E600759CE5 /* BDGeometry.h */,
+				836268C11BF822E600759CE5 /* BDGeospatialUnits.h */,
+				836268C21BF822E600759CE5 /* BDLineString.h */,
+				836268C31BF822E600759CE5 /* BDLocation.h */,
+				836268C41BF822E600759CE5 /* BDLocationManager+BDPointSDK.h */,
+				836268C51BF822E600759CE5 /* BDLocationManager.h */,
+				836268C61BF822E600759CE5 /* BDPAuthenticationStateProvider.h */,
+				836268C71BF822E600759CE5 /* BDPDeepCopy.h */,
+				836268C81BF822E600759CE5 /* BDPGeometry.h */,
+				836268C91BF822E600759CE5 /* BDPLocationDelegate.h */,
+				836268CA1BF822E600759CE5 /* BDPManagedObject.h */,
+				836268CB1BF822E600759CE5 /* BDPMKShape.h */,
+				836268CC1BF822E600759CE5 /* BDPNamedDescribed.h */,
+				836268CD1BF822E600759CE5 /* BDPoint.h */,
+				836268CE1BF822E600759CE5 /* BDPointDelegate.h */,
+				836268CF1BF822E600759CE5 /* BDPointOverlayRendererFactory.h */,
+				836268D01BF822E600759CE5 /* BDPointSDK.h */,
+				836268D11BF822E600759CE5 /* BDPointSessionException.h */,
+				836268D21BF822E600759CE5 /* BDPolygon.h */,
+				836268D31BF822E600759CE5 /* BDPolygonal.h */,
+				836268D41BF822E600759CE5 /* BDPRestartAlertDelegate.h */,
+				836268D51BF822E600759CE5 /* BDPSessionDelegate.h */,
+				836268D61BF822E600759CE5 /* BDPSpatialObject.h */,
+				836268D71BF822E600759CE5 /* BDPSpatialObjectInfo.h */,
+				836268D81BF822E600759CE5 /* BDPValidatable.h */,
+				836268D91BF822E600759CE5 /* BDZoneInfo.h */,
+				836268DA1BF822E600759CE5 /* MKMapView+BDPointSDK.h */,
+				836268DB1BF822E600759CE5 /* NSString+BDURLEncoding.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		8E7F2659579BDD43CFB81247 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				836268B51BF81EED00759CE5 /* AVFoundation.framework */,
+				836268B31BF81EE700759CE5 /* UIKit.framework */,
+				836268B11BF81EDA00759CE5 /* AudioToolbox.framework */,
+				836268AF1BF81ECF00759CE5 /* SystemConfiguration.framework */,
+				836268AD1BF81ECA00759CE5 /* CoreGraphics.framework */,
+				836268AB1BF81E9D00759CE5 /* CoreMotion.framework */,
+				836268A91BF81E9700759CE5 /* CoreLocation.framework */,
 				587208DFF93C7C844A873F7F /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -429,10 +541,57 @@
 			baseConfigurationReference = 83143EA0438F119E32098632 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+					"BluedotPointSDK/include/**",
+				);
 				INFOPLIST_FILE = foodhaven/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					BluedotPointSDK,
+					"$(PROJECT_DIR)/BluedotPointSDK",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreBluetooth\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-lBDPointSDK-${PLATFORM_NAME}",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.madhu.foodhaven;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "foodhaven/foodhaven-bridging-header.h";
 			};
 			name = Debug;
 		};
@@ -441,10 +600,57 @@
 			baseConfigurationReference = ACC95E4203BD158F51854834 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+					"BluedotPointSDK/include/**",
+				);
 				INFOPLIST_FILE = foodhaven/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					BluedotPointSDK,
+					"$(PROJECT_DIR)/BluedotPointSDK",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreBluetooth\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-lBDPointSDK-${PLATFORM_NAME}",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.madhu.foodhaven;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "foodhaven/foodhaven-bridging-header.h";
 			};
 			name = Release;
 		};
