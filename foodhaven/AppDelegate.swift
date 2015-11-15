@@ -24,6 +24,7 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
         locationManager.locationDelegate = self
         locationManager.sessionDelegate  = self
         
+        locationManager.authenticateWithApiKey("1e789f50-8b34-11e5-84c8-bc305bf60831", packageName: "au.com.foodhaven", username: "foodhavenapp@gmail.com")
         
         return true
     }
@@ -80,11 +81,15 @@ extension AppDelegate : BDPLocationDelegate {
     
     public func didUpdateZoneInfo(zoneInfos: Set<NSObject>!) {
         
+        // This gives you access to all the Zones defined in the back-end, in case you want to show them on the map
+        
+        
+        
     }
 
     public func didCheckIntoFence( fence: BDFenceInfo?, inZone zoneInfo: BDZoneInfo?, atCoordinate coordinate: BDLocationCoordinate2D, onDate date: NSDate!) {
         
-        // TODO: Implement here: To show 
+        // TODO: Implement here: To show
         
     }
 

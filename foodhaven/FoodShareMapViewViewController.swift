@@ -114,6 +114,23 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate {
         ]
     }
     
+    func createBluedotDummyData( zoneInfos: [BDZoneInfo] ) -> [HomeRestaurant] {
+        var homeRestaurants = Array<HomeRestaurant>()
+        for zoneInfo in zoneInfos {
+            let homeRestaurant : HomeRestaurant
+            switch zoneInfo.ID
+            {
+                case "63a945db-ec2e-4158-af03-bd826c721b0f": // Menu A
+                    homeRestaurant = createRestaurant(<#T##name: String##String#>, location: <#T##CLLocationCoordinate2D#>, foodItems: <#T##[FoodItem]#>, photo: <#T##String#>)
+                
+                case "e796310a-0825-4170-9e60-072919b83424": // Menu B
+                    homeRestaurant = createRestaurant("Menu B", location: <#T##CLLocationCoordinate2D#>, foodItems: <#T##[FoodItem]#>, photo: <#T##String#>)
+            }
+            homeRestaurants.append(homeRestaurant)
+        }
+        return homeRestaurants
+    }
+    
     func createRestaurant(name: String, location: CLLocationCoordinate2D, foodItems: [FoodItem], photo: String) -> HomeRestaurant {
         let homeRestaurant = HomeRestaurant(name: name, location: location, specialFoodItem: foodItems[0])
         homeRestaurant.menu = Menu()
