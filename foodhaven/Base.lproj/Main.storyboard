@@ -264,7 +264,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFj-FY-wBR">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFj-FY-wBR">
                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -277,6 +277,8 @@
                                                 <constraint firstItem="3qC-1q-JVC" firstAttribute="top" secondItem="hR8-JD-Qop" secondAttribute="topMargin" id="Kde-Do-08p"/>
                                                 <constraint firstItem="3qC-1q-JVC" firstAttribute="centerX" secondItem="hR8-JD-Qop" secondAttribute="centerX" id="Ov3-gk-a3q"/>
                                                 <constraint firstItem="FFj-FY-wBR" firstAttribute="top" secondItem="3qC-1q-JVC" secondAttribute="bottom" id="Ys7-JE-Nj5"/>
+                                                <constraint firstItem="FFj-FY-wBR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hR8-JD-Qop" secondAttribute="leading" constant="8" id="ae4-3t-7Nj"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FFj-FY-wBR" secondAttribute="trailing" constant="8" id="bkg-6W-Ulw"/>
                                                 <constraint firstItem="FFj-FY-wBR" firstAttribute="centerX" secondItem="hR8-JD-Qop" secondAttribute="centerX" id="vch-qg-k41"/>
                                             </constraints>
                                             <variation key="default">
@@ -285,10 +287,12 @@
                                                     <exclude reference="FFj-FY-wBR"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <exclude reference="Ys7-JE-Nj5"/>
+                                                    <exclude reference="ae4-3t-7Nj"/>
+                                                    <exclude reference="bkg-6W-Ulw"/>
+                                                    <exclude reference="vch-qg-k41"/>
                                                     <exclude reference="Kde-Do-08p"/>
                                                     <exclude reference="Ov3-gk-a3q"/>
-                                                    <exclude reference="Ys7-JE-Nj5"/>
-                                                    <exclude reference="vch-qg-k41"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -297,10 +301,12 @@
                                                     <include reference="FFj-FY-wBR"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <include reference="Ys7-JE-Nj5"/>
+                                                    <include reference="ae4-3t-7Nj"/>
+                                                    <include reference="bkg-6W-Ulw"/>
+                                                    <include reference="vch-qg-k41"/>
                                                     <include reference="Kde-Do-08p"/>
                                                     <include reference="Ov3-gk-a3q"/>
-                                                    <include reference="Ys7-JE-Nj5"/>
-                                                    <include reference="vch-qg-k41"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
