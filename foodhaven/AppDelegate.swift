@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleMaps
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        GMSServices.provideAPIKey("AIzaSyCpR0H-3o6sRwsIAjW-6nw7XOYIVyo3Uf0")
+        setupGoogleMaps()
+        setupParse(launchOptions)
         return true
+    }
+    
+    private func setupGoogleMaps() {
+        GMSServices.provideAPIKey("AIzaSyCpR0H-3o6sRwsIAjW-6nw7XOYIVyo3Uf0")
+    }
+    
+    private func setupParse(launchOptions: [NSObject: AnyObject]?) {
+        Parse.enableLocalDatastore()
+        Parse.setApplicationId("iTaRsJvRVz3GIQv9csAX7TsfaOev36sDuZndg8GV",
+            clientKey: "vrvzfuDXhNSGxqJsOAE9q82thCkQAA3eYcfiyfBQ")//setup parse
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)//analytics
+
     }
 
     func applicationWillResignActive(application: UIApplication) {
