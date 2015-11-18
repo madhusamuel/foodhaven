@@ -72,14 +72,14 @@
             </objects>
             <point key="canvasLocation" x="1110" y="-315"/>
         </scene>
-        <!--Settings Table View Controller-->
+        <!--Settings - Adhoc Features-->
         <scene sceneID="4pA-6e-r45">
             <objects>
                 <tableViewController id="wUN-XD-xZ4" customClass="SettingsTableViewController" customModule="foodhaven" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="pS8-Ao-Bxg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="pS8-Ao-Bxg">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="p4T-fP-CJb">
                                 <cells>
@@ -106,22 +106,6 @@
                                             <segue destination="pg7-9H-Pza" kind="show" id="evz-h1-Xdc"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="W2l-8t-qQP">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W2l-8t-qQP" id="owQ-Jn-YpN">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <animations/>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hgO-Pi-tPl">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hgO-Pi-tPl" id="kG8-V2-0Gc">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <animations/>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -130,12 +114,13 @@
                             <outlet property="delegate" destination="wUN-XD-xZ4" id="oB5-Xq-2VM"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Settings - Adhoc Features" id="yZi-BQ-ilL"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ala-x5-edn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1843.5" y="-953.25"/>
         </scene>
-        <!--Login Table View Controller-->
+        <!--Login-->
         <scene sceneID="XhV-VS-r4y">
             <objects>
                 <tableViewController id="pg7-9H-Pza" customClass="LoginTableViewController" customModule="foodhaven" customModuleProvider="target" sceneMemberID="viewController">
@@ -295,6 +280,7 @@
                             <outlet property="delegate" destination="pg7-9H-Pza" id="blw-4r-oL3"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Login" id="3c0-2o-AQj"/>
                     <connections>
                         <outlet property="passwordTextField" destination="rY0-oh-G6O" id="c7E-Qf-qwi"/>
                         <outlet property="userNameTextField" destination="74W-Sf-G9p" id="a0T-s9-JnQ"/>
