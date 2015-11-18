@@ -7,7 +7,11 @@
 //
 
 import Foundation
+import Parse
 
 class LoginDataService {
+    func singUpWithUserName(userName: String, password: String, email: String, success: (user: User) -> (), failure: (error: NSError) -> ()) {
+        
+    }
     
 }

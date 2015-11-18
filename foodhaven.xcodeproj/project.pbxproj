@@ -10,6 +10,8 @@
 		3E02277C1BFC35EE00CDD995 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02277B1BFC35EE00CDD995 /* SettingsTableViewController.swift */; };
 		3E02277E1BFC365400CDD995 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02277D1BFC365400CDD995 /* LoginTableViewController.swift */; };
 		3E0227821BFC463700CDD995 /* LoginDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0227811BFC463700CDD995 /* LoginDataService.swift */; };
+		3E0227841BFC467A00CDD995 /* LoginDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0227831BFC467A00CDD995 /* LoginDataServiceTests.swift */; };
+		3E0227871BFC491300CDD995 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0227861BFC491300CDD995 /* User.swift */; };
 		3E0B811F1BF70F7F0030CFDA /* FoodShareMapViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B811E1BF70F7F0030CFDA /* FoodShareMapViewViewController.swift */; };
 		3E8BD5151BF70C0C0018EEE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8BD5141BF70C0C0018EEE4 /* AppDelegate.swift */; };
 		3E8BD51A1BF70C0C0018EEE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8BD5181BF70C0C0018EEE4 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 		3E02277B1BFC35EE00CDD995 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		3E02277D1BFC365400CDD995 /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		3E0227811BFC463700CDD995 /* LoginDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDataService.swift; sourceTree = "<group>"; };
+		3E0227831BFC467A00CDD995 /* LoginDataServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDataServiceTests.swift; sourceTree = "<group>"; };
+		3E0227861BFC491300CDD995 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3E0B811E1BF70F7F0030CFDA /* FoodShareMapViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodShareMapViewViewController.swift; sourceTree = "<group>"; };
 		3E8BD5111BF70C0C0018EEE4 /* foodhaven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodhaven.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8BD5141BF70C0C0018EEE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 		3E0227791BFC357A00CDD995 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				3E0227851BFC490A00CDD995 /* Model */,
 				3E0227801BFC461E00CDD995 /* DataService */,
 				3E02277D1BFC365400CDD995 /* LoginTableViewController.swift */,
 			);
@@ -100,6 +105,14 @@
 				3E0227811BFC463700CDD995 /* LoginDataService.swift */,
 			);
 			path = DataService;
+			sourceTree = "<group>";
+		};
+		3E0227851BFC490A00CDD995 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E0227861BFC491300CDD995 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3E8BD5081BF70C0C0018EEE4 = {
@@ -145,6 +158,7 @@
 			children = (
 				3E8BD5291BF70C0D0018EEE4 /* foodhavenTests.swift */,
 				3E8BD52B1BF70C0D0018EEE4 /* Info.plist */,
+				3E0227831BFC467A00CDD995 /* LoginDataServiceTests.swift */,
 			);
 			path = foodhavenTests;
 			sourceTree = "<group>";
@@ -338,6 +352,7 @@
 				3E8BD5151BF70C0C0018EEE4 /* AppDelegate.swift in Sources */,
 				3EB06B641BF7E3FC00D54747 /* FoodItem.swift in Sources */,
 				3EB06B621BF7E3CE00D54747 /* Menu.swift in Sources */,
+				3E0227871BFC491300CDD995 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E8BD52A1BF70C0D0018EEE4 /* foodhavenTests.swift in Sources */,
+				3E0227841BFC467A00CDD995 /* LoginDataServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
