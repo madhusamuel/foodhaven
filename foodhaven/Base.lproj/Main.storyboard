@@ -56,7 +56,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="dFb-6U-WjE"/>
+                    <navigationItem key="navigationItem" id="dFb-6U-WjE">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="Rh8-P8-xlA">
+                            <connections>
+                                <segue destination="wUN-XD-xZ4" kind="show" id="YoV-4s-IGG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="CXN-YG-ave" id="7LK-hz-n25"/>
                         <segue destination="mkB-6Y-zlM" kind="show" identifier="showMenuSegue" id="wv9-FA-XNh"/>
@@ -65,6 +71,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1110" y="-315"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="4pA-6e-r45">
+            <objects>
+                <tableViewController id="wUN-XD-xZ4" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="pS8-Ao-Bxg">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="p4T-fP-CJb">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="gkU-Z3-Zhj" style="IBUITableViewCellStyleDefault" id="JQy-gM-57c">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JQy-gM-57c" id="t7g-5J-fWz">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gkU-Z3-Zhj">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="W2l-8t-qQP">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W2l-8t-qQP" id="owQ-Jn-YpN">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hgO-Pi-tPl">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hgO-Pi-tPl" id="kG8-V2-0Gc">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="wUN-XD-xZ4" id="xFj-oL-1hq"/>
+                            <outlet property="delegate" destination="wUN-XD-xZ4" id="oB5-Xq-2VM"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ala-x5-edn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1843.5" y="-953.25"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="YOX-n8-cRe">
@@ -287,12 +353,12 @@
                                                     <exclude reference="FFj-FY-wBR"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <exclude reference="Kde-Do-08p"/>
+                                                    <exclude reference="Ov3-gk-a3q"/>
                                                     <exclude reference="Ys7-JE-Nj5"/>
                                                     <exclude reference="ae4-3t-7Nj"/>
                                                     <exclude reference="bkg-6W-Ulw"/>
                                                     <exclude reference="vch-qg-k41"/>
-                                                    <exclude reference="Kde-Do-08p"/>
-                                                    <exclude reference="Ov3-gk-a3q"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -301,12 +367,12 @@
                                                     <include reference="FFj-FY-wBR"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <include reference="Kde-Do-08p"/>
+                                                    <include reference="Ov3-gk-a3q"/>
                                                     <include reference="Ys7-JE-Nj5"/>
                                                     <include reference="ae4-3t-7Nj"/>
                                                     <include reference="bkg-6W-Ulw"/>
                                                     <include reference="vch-qg-k41"/>
-                                                    <include reference="Kde-Do-08p"/>
-                                                    <include reference="Ov3-gk-a3q"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
