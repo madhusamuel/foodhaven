@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E02277C1BFC35EE00CDD995 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02277B1BFC35EE00CDD995 /* SettingsTableViewController.swift */; };
 		3E02277E1BFC365400CDD995 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02277D1BFC365400CDD995 /* LoginTableViewController.swift */; };
+		3E0227821BFC463700CDD995 /* LoginDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0227811BFC463700CDD995 /* LoginDataService.swift */; };
 		3E0B811F1BF70F7F0030CFDA /* FoodShareMapViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B811E1BF70F7F0030CFDA /* FoodShareMapViewViewController.swift */; };
 		3E8BD5151BF70C0C0018EEE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8BD5141BF70C0C0018EEE4 /* AppDelegate.swift */; };
 		3E8BD51A1BF70C0C0018EEE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8BD5181BF70C0C0018EEE4 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		3E02277B1BFC35EE00CDD995 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		3E02277D1BFC365400CDD995 /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
+		3E0227811BFC463700CDD995 /* LoginDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDataService.swift; sourceTree = "<group>"; };
 		3E0B811E1BF70F7F0030CFDA /* FoodShareMapViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodShareMapViewViewController.swift; sourceTree = "<group>"; };
 		3E8BD5111BF70C0C0018EEE4 /* foodhaven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodhaven.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8BD5141BF70C0C0018EEE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		3E0227791BFC357A00CDD995 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				3E0227801BFC461E00CDD995 /* DataService */,
 				3E02277D1BFC365400CDD995 /* LoginTableViewController.swift */,
 			);
 			path = Login;
@@ -89,6 +92,14 @@
 				3E02277B1BFC35EE00CDD995 /* SettingsTableViewController.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		3E0227801BFC461E00CDD995 /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				3E0227811BFC463700CDD995 /* LoginDataService.swift */,
+			);
+			path = DataService;
 			sourceTree = "<group>";
 		};
 		3E8BD5081BF70C0C0018EEE4 = {
@@ -320,6 +331,7 @@
 				3EB06B601BF7E38300D54747 /* HomeRestaurant.swift in Sources */,
 				3EB06B661BF7F74A00D54747 /* MenuViewController.swift in Sources */,
 				3E02277E1BFC365400CDD995 /* LoginTableViewController.swift in Sources */,
+				3E0227821BFC463700CDD995 /* LoginDataService.swift in Sources */,
 				3E0B811F1BF70F7F0030CFDA /* FoodShareMapViewViewController.swift in Sources */,
 				3EB06B681BF7FDA700D54747 /* FoodTableViewController.swift in Sources */,
 				3E02277C1BFC35EE00CDD995 /* SettingsTableViewController.swift in Sources */,
