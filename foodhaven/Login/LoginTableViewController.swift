@@ -10,7 +10,17 @@ import UIKit
 
 class LoginTableViewController: UITableViewController {
 
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func loginButtonTapped(sender: AnyObject) {
+        
+    }
+    
 }
