@@ -135,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="1843.5" y="-953.25"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Login Table View Controller-->
         <scene sceneID="XhV-VS-r4y">
             <objects>
-                <tableViewController id="pg7-9H-Pza" sceneMemberID="viewController">
+                <tableViewController id="pg7-9H-Pza" customClass="LoginTableViewController" customModule="foodhaven" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1Il-Xl-8X1">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
