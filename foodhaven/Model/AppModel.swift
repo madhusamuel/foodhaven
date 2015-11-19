@@ -10,6 +10,7 @@ import Foundation
 
 class AppModel {
     var currentUser: User?
+    var homeRestaurants: [HomeRestaurant] = []
     
     private static let instance = AppModel()
     

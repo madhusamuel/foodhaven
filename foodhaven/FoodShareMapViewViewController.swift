@@ -27,7 +27,8 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate, CLLo
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.homeRestaurants = DataFactory.sharedInstance.createNewDummyData() //dummyData()
+        homeRestaurants = DataFactory.sharedInstance.createNewDummyData()
+        AppModel.sharedInstance().homeRestaurants = homeRestaurants
         setupMap()
         findLocation()
     }
@@ -66,6 +67,7 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate, CLLo
             self.currentLocation = locations[0].coordinate
             self.updateMap(self.currentLocation)
             self.homeRestaurants = DataFactory.sharedInstance.createNewDummyData(self.currentLocation)
+            AppModel.sharedInstance().homeRestaurants = self.homeRestaurants
             self.addMarkers()
             ActivityManager.sharedManager().stopActivityIndicator()
         }
