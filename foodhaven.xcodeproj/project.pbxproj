@@ -25,6 +25,8 @@
 		3EB06B681BF7FDA700D54747 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB06B671BF7FDA700D54747 /* FoodTableViewController.swift */; };
 		3ED48BB21BFD545900EC5157 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED48BB11BFD545900EC5157 /* AppModel.swift */; };
 		3ED48BB41BFD575900EC5157 /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED48BB31BFD575900EC5157 /* SignUpTableViewController.swift */; };
+		3ED48BB81BFD5AF200EC5157 /* DisplayUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED48BB71BFD5AF200EC5157 /* DisplayUtil.swift */; };
+		3ED48BBB1BFD6D3600EC5157 /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED48BBA1BFD6D3600EC5157 /* ActivityManager.swift */; };
 		8CF837441487EFE6844DC670 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587208DFF93C7C844A873F7F /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		3EB06B671BF7FDA700D54747 /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
 		3ED48BB11BFD545900EC5157 /* AppModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		3ED48BB31BFD575900EC5157 /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
+		3ED48BB71BFD5AF200EC5157 /* DisplayUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayUtil.swift; sourceTree = "<group>"; };
+		3ED48BBA1BFD6D3600EC5157 /* ActivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
 		587208DFF93C7C844A873F7F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83143EA0438F119E32098632 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ACC95E4203BD158F51854834 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 		3E8BD5131BF70C0C0018EEE4 /* foodhaven */ = {
 			isa = PBXGroup;
 			children = (
+				3ED48BB51BFD5ADD00EC5157 /* Core */,
 				3E0227791BFC357A00CDD995 /* Login */,
 				3E02277A1BFC357A00CDD995 /* Settings */,
 				3EB06B5E1BF7E38300D54747 /* Model */,
@@ -177,6 +182,31 @@
 				3ED48BB11BFD545900EC5157 /* AppModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3ED48BB51BFD5ADD00EC5157 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3ED48BB91BFD6D3600EC5157 /* UI */,
+				3ED48BB61BFD5ADD00EC5157 /* Util */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3ED48BB61BFD5ADD00EC5157 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3ED48BB71BFD5AF200EC5157 /* DisplayUtil.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		3ED48BB91BFD6D3600EC5157 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3ED48BBA1BFD6D3600EC5157 /* ActivityManager.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		3F97307E180F91F133448C88 /* Pods */ = {
@@ -348,10 +378,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED48BB81BFD5AF200EC5157 /* DisplayUtil.swift in Sources */,
 				3EB06B601BF7E38300D54747 /* HomeRestaurant.swift in Sources */,
 				3ED48BB41BFD575900EC5157 /* SignUpTableViewController.swift in Sources */,
 				3EB06B661BF7F74A00D54747 /* MenuViewController.swift in Sources */,
 				3E02277E1BFC365400CDD995 /* LoginTableViewController.swift in Sources */,
+				3ED48BBB1BFD6D3600EC5157 /* ActivityManager.swift in Sources */,
 				3E0227821BFC463700CDD995 /* LoginDataService.swift in Sources */,
 				3E0B811F1BF70F7F0030CFDA /* FoodShareMapViewViewController.swift in Sources */,
 				3EB06B681BF7FDA700D54747 /* FoodTableViewController.swift in Sources */,
