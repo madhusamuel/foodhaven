@@ -17,6 +17,7 @@ class LoginTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userNameTextField.becomeFirstResponder()
     }
     
     @IBAction func loginButtonTapped(sender: AnyObject) {
