@@ -45,6 +45,7 @@ class LoginTableViewController: UITableViewController {
         LoginDataService().loginWithUserName(userName, password: password, success: { (user) -> () in
                 AppModel.sharedInstance().currentUser = user
                 ActivityManager.sharedManager().stopActivityIndicator()
+                self.navigationController?.popViewControllerAnimated(true)
             }, failure: {(error) -> () in
                 DisplayUtil.displayAlert("Error Code - "+String(error.code), message: error.localizedDescription, presentingViewController: self)
                 ActivityManager.sharedManager().stopActivityIndicator()
