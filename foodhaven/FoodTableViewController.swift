@@ -22,6 +22,7 @@ class FoodTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = foodItem.name
         foodImageView.image = UIImage(named: foodItem.photo)
         foodTitleLabel.text = foodItem.name
         foodIngredientsLabel.text = foodItem.ingredients

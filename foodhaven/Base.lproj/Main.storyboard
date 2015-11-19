@@ -194,7 +194,7 @@
                                             <outlet property="foodImageView" destination="WtZ-bb-eHZ" id="PL0-bK-CYa"/>
                                             <outlet property="foodRateLabel" destination="8OO-pO-7jS" id="BR5-Zs-QHQ"/>
                                             <outlet property="foodTitleLabel" destination="59v-Sm-nwe" id="iJ9-SG-OlP"/>
-                                            <segue destination="bkg-jP-wV2" kind="show" id="S2b-4E-Urx"/>
+                                            <segue destination="bkg-jP-wV2" kind="show" identifier="showFoodItemSegueFromMenuList" id="S2b-4E-Urx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -242,6 +242,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="ap6-gh-srC" id="4Mm-xu-sHM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgN-20-4sg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

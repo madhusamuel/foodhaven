@@ -12,6 +12,8 @@ class FoodMenuListViewController: UIViewController, UITableViewDelegate, UITable
     
     var masterFoodList: [FoodItem] = []
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.masterFoodList = createMasterFoodList(AppModel.sharedInstance().homeRestaurants)
@@ -44,15 +46,21 @@ class FoodMenuListViewController: UIViewController, UITableViewDelegate, UITable
         return cell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showFoodItemSegueFromMenuList" {
+            let foodViewController = segue.destinationViewController as! FoodTableViewController
+            foodViewController.foodItem = masterFoodList[tableView.indexPathForSelectedRow!.row]
+        }
     }
-    */
+
 
 }
