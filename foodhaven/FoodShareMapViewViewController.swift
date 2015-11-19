@@ -9,27 +9,27 @@
 import UIKit
 import GoogleMaps
 
-class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate {
+class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: GMSMapView!
     
-    //TODO change to current location co-ordinates
-//    let latitudeOfMelbourne = -37.591291
-//    let longitudeOfMelbourne = 144.202203
-    let latitudeOfMelbourne = -37.602282
-    let longitudeOfMelbourne = 144.231143
+    let latitudeOfMelbourne = -37.8136
+    let longitudeOfMelbourne = 144.9631
+    
+    var locationManager: CLLocationManager?
     
     //,latitude: -37.602282, longitude: 144.231143
     
     var homeRestaurants: [HomeRestaurant] = []
     
     var currentMarker: GMSMarker?
+    var currentLocation: CLLocationCoordinate2D!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.homeRestaurants = DataFactory.sharedInstance.createNewDummyData() //dummyData()
         setupMap()
-        addMarkers()
+        findLocation()
     }
     
     // MARK: - Setup methods
@@ -41,6 +41,44 @@ class FoodShareMapViewViewController: UIViewController, GMSMapViewDelegate {
         mapView.myLocationEnabled = true
         self.view = mapView
         mapView.delegate = self
+    }
+    
+    func findLocation() {
+        self.title = "Locating You..."
+        if (locationManager == nil) {
+            locationManager = CLLocationManager()
+        }
+        locationManager?.delegate = self
+        
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager?.distanceFilter = 100 // meteres
+        locationManager?.requestWhenInUseAuthorization()
+        ActivityManager.sharedManager().startActivityIndicator(view)
+        locationManager?.requestLocation()
+    }
+    
+    //MARK: locationManagerDelegate
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("Invoking didUpdateLocations")
+        if (locations.count > 0) {
+            print("Location -> \(locations[0])")
+            self.title = "Nearby Kitchens"
+            self.currentLocation = locations[0].coordinate
+            self.updateMap(self.currentLocation)
+            self.homeRestaurants = DataFactory.sharedInstance.createNewDummyData(self.currentLocation)
+            self.addMarkers()
+            ActivityManager.sharedManager().stopActivityIndicator()
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("Location update FAILED")
+    }
+    
+    func updateMap(currentLocation: CLLocationCoordinate2D) {
+        let camera = GMSCameraPosition.cameraWithLatitude(currentLocation.latitude,
+            longitude: currentLocation.longitude, zoom: 14.5)
+        mapView.camera = camera
     }
     
     func addMarkers() {

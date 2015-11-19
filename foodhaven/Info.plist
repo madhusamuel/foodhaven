@@ -29,6 +29,8 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
+		<string>location-services</string>
+		<string>gps</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
@@ -36,5 +38,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app will use your location to identify your current location.</string>
 </dict>
 </plist>
