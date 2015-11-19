@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+class AppModel {
+    var currentUser: User?
+}
