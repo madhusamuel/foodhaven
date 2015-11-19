@@ -54,7 +54,7 @@ class DataFactory {
                 photo: "old_man_in_kitchen"),
             createRestaurant("Toms", location: CLLocationCoordinate2D(latitude: -37.600729, longitude: 144.236548),
                 foodItems:
-                [FoodItem(name: "Pasta", price: 11, stock: 4, ingredients: "Wheat Flour, salt, olive oil", photo: "pasta")],
+                [FoodItem(name: "Pasta With Cheese", price: 11, stock: 4, ingredients: "Wheat Flour, salt, olive oil", photo: "pasta")],
                 photo: "man_in_kitchen")
         ]
     }
@@ -89,7 +89,7 @@ class DataFactory {
                 photo: "old_man_in_kitchen"),
             createRestaurant("Toms", location: CLLocationCoordinate2D(latitude: currentLocation.latitude - 1.5*gap, longitude: currentLocation.longitude - 3*gap),
                 foodItems:
-                [FoodItem(name: "Pasta", price: 11, stock: 4, ingredients: "Wheat Flour, salt, olive oil", photo: "pasta")],
+                [FoodItem(name: "Pasta With Cheese", price: 11, stock: 4, ingredients: "Wheat Flour, salt, olive oil", photo: "pasta")],
                 photo: "man_in_kitchen")
         ]
     }

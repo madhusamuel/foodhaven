@@ -77,7 +77,7 @@
             </objects>
             <point key="canvasLocation" x="1080" y="-265.5"/>
         </scene>
-        <!--Food Menu List View Controller-->
+        <!--Menu-->
         <scene sceneID="x9d-JQ-x1F">
             <objects>
                 <viewController id="dCU-rh-zpg" customClass="FoodMenuListViewController" customModule="foodhaven" customModuleProvider="target" sceneMemberID="viewController">
@@ -235,7 +235,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="ZLR-dk-yZw">
+                    <navigationItem key="navigationItem" title="Menu" id="ZLR-dk-yZw">
                         <barButtonItem key="leftBarButtonItem" title="Map" id="gWo-ZB-HNy">
                             <connections>
                                 <segue destination="ox6-fx-ccl" kind="presentation" modalTransitionStyle="flipHorizontal" id="b0R-MS-ck3"/>
