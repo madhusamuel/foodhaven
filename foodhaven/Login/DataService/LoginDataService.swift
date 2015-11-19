@@ -45,6 +45,8 @@ class LoginDataService {
         PFUser.logOutInBackgroundWithBlock { (error: NSError?) -> Void in
             if let error = error {
                 failure(error: error)
+            } else {
+                success()
             }
         }
     }

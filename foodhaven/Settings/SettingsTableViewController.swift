@@ -19,10 +19,14 @@ class SettingsTableViewController: UITableViewController {
     }
     
     func logout() {
+        ActivityManager.sharedManager().startActivityIndicator(view)
         LoginDataService().logout({ () -> () in
                 AppModel.sharedInstance().currentUser = nil
+                ActivityManager.sharedManager().stopActivityIndicator()
+                DisplayUtil.displayAlert("Logout", message: "You are logged out", presentingViewController: self)
             }, failure: { (error) -> () in
-                print("logout failed \(error)")
+                DisplayUtil.displayAlert("Error Code - "+String(error.code), message: error.localizedDescription, presentingViewController: self)
+                ActivityManager.sharedManager().stopActivityIndicator()
         })
     }
 
