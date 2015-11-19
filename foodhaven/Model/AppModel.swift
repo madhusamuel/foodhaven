@@ -10,4 +10,10 @@ import Foundation
 
 class AppModel {
     var currentUser: User?
+    
+    private static let instance = AppModel()
+    
+    static func sharedInstance() -> AppModel {
+        return instance
+    }
 }

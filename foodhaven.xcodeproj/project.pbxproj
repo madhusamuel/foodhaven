@@ -24,6 +24,7 @@
 		3EB06B661BF7F74A00D54747 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB06B651BF7F74A00D54747 /* MenuViewController.swift */; };
 		3EB06B681BF7FDA700D54747 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB06B671BF7FDA700D54747 /* FoodTableViewController.swift */; };
 		3ED48BB21BFD545900EC5157 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED48BB11BFD545900EC5157 /* AppModel.swift */; };
+		3ED48BB41BFD575900EC5157 /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED48BB31BFD575900EC5157 /* SignUpTableViewController.swift */; };
 		8CF837441487EFE6844DC670 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587208DFF93C7C844A873F7F /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		3EB06B651BF7F74A00D54747 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3EB06B671BF7FDA700D54747 /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
 		3ED48BB11BFD545900EC5157 /* AppModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		3ED48BB31BFD575900EC5157 /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
 		587208DFF93C7C844A873F7F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83143EA0438F119E32098632 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ACC95E4203BD158F51854834 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				3E0227851BFC490A00CDD995 /* Model */,
 				3E0227801BFC461E00CDD995 /* DataService */,
 				3E02277D1BFC365400CDD995 /* LoginTableViewController.swift */,
+				3ED48BB31BFD575900EC5157 /* SignUpTableViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EB06B601BF7E38300D54747 /* HomeRestaurant.swift in Sources */,
+				3ED48BB41BFD575900EC5157 /* SignUpTableViewController.swift in Sources */,
 				3EB06B661BF7F74A00D54747 /* MenuViewController.swift in Sources */,
 				3E02277E1BFC365400CDD995 /* LoginTableViewController.swift in Sources */,
 				3E0227821BFC463700CDD995 /* LoginDataService.swift in Sources */,
