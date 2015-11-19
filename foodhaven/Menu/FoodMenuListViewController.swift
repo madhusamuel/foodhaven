@@ -38,9 +38,9 @@ class FoodMenuListViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("foodMenuListTableViewCell") as! FoodMenuListTableViewCell
         let foodItem = masterFoodList[indexPath.row]
-        cell.imageView?.image = UIImage(named: foodItem.photo)
+        cell.foodImageView?.image = UIImage(named: foodItem.photo)
         cell.foodTitleLabel.text = foodItem.name
-        cell.foodRateLabel.text = "$\(foodItem.price)"
+        cell.foodRateLabel.text = "Price: $\(foodItem.price)"
         return cell
     }
     
