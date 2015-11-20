@@ -16,6 +16,7 @@ class FoodMenuListViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        AppModel.sharedInstance().homeRestaurants = DataFactory.sharedInstance.createNewDummyData()
         self.masterFoodList = createMasterFoodList(AppModel.sharedInstance().homeRestaurants)
     }
     
