@@ -57,6 +57,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="dFb-6U-WjE">
+                        <barButtonItem key="backBarButtonItem" title=" " id="mML-Fg-7ZV"/>
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="Zhl-Dp-eCP">
                             <connections>
                                 <segue destination="BNu-Yq-s22" kind="presentation" modalTransitionStyle="flipHorizontal" id="r2w-5O-ZwA"/>
@@ -238,6 +239,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="ZLR-dk-yZw">
+                        <barButtonItem key="backBarButtonItem" title=" " id="OW5-o6-mLJ"/>
                         <barButtonItem key="leftBarButtonItem" title="Map" id="gWo-ZB-HNy">
                             <connections>
                                 <segue destination="ox6-fx-ccl" kind="presentation" modalTransitionStyle="flipHorizontal" id="b0R-MS-ck3"/>
@@ -649,6 +651,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="hHE-tk-YWm">
+                        <barButtonItem key="backBarButtonItem" title=" " id="hrW-nd-jsa"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="photoImageView" destination="izI-dJ-r27" id="6Xj-40-vYn"/>
                         <outlet property="tableView" destination="YKb-UJ-GD7" id="AvP-f7-xeh"/>
@@ -897,6 +902,9 @@
                             <outlet property="delegate" destination="bkg-jP-wV2" id="vtP-ek-Yrg"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="xtb-iz-6Gf">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Ftd-I5-ZS0"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="foodImageView" destination="XXR-WD-zB8" id="IMg-MJ-lXO"/>
                         <outlet property="foodIngredientsLabel" destination="FFj-FY-wBR" id="Czg-O9-42y"/>
@@ -1221,6 +1229,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="S2b-4E-Urx"/>
+        <segue reference="Hod-xs-dBL"/>
     </inferredMetricsTieBreakers>
 </document>

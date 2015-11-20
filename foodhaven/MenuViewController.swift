@@ -16,6 +16,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = homeRestaurant.name
         photoImageView.image = UIImage(named: homeRestaurant.photoName)
         // Do any additional setup after loading the view.
     }
